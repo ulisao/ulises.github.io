@@ -1,0 +1,308 @@
+/* Minimal Reset */
+
+html { 
+  overflow-y: scroll;
+  
+  font-size: 112.5%;  
+  --bck-color: #282923;
+  --ft-color: #DDD;
+  --link-color: #6F0; 
+  --header-color: #414141; 
+  --mk-bckg: rgba(144,238,144, 0.35);
+  --mk-color: #DDD;
+  --ft-desc: #999; 
+}
+
+html.light {
+  --bck-color: #FFF;
+  --ft-color: #24292e;
+  --link-color: #0366d6;
+  --header-color: #e5e4e2;
+  --mk-bckg: #FDFD96;
+  --mk-color: #24292e;
+  --ft-desc: #6b645d;
+}
+
+html.dark {
+  --bck-color: #282923;
+  --ft-color: #DDD;
+  --link-color: #6F0; 
+  --header-color: #414141; 
+  --mk-bckg: rgba(144,238,144, 0.35);
+  --mk-color: #DDD;
+  --ft-desc: #999;
+}
+
+
+/* Base Style */
+
+body {
+  background-color: var(--bck-color);
+  color: var(--ft-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+  font-family: 'Hack', 'DejaVu Sans', sans-serif; 
+}
+
+h1, h2, h3 {
+  margin-top: 1.8em;
+  line-height: 1.2em;
+}
+
+li {
+  line-height: 1.8rem;
+}
+
+/* Grid */
+
+.container {
+  max-width: 45rem;
+  margin: 1rem auto;
+  padding: 0 3%;  
+}
+
+
+/* Links */
+
+a:link, 
+a:visited, 
+a:active {
+  color: var(--link-color);
+  text-decoration: none;
+}
+	  
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+
+/* Lists */
+
+ul {
+  list-style-type: square;
+}
+
+/* Navigation */ 
+
+nav {
+  text-align: center;
+  margin: 2.0rem 0;
+}
+
+nav a:link,
+nav a:visited, 
+nav a:active {
+  color: var(--ft-color); 
+  text-decoration: none; 
+}
+
+nav a:hover,
+    a:focus {
+  color: #999;
+  text-decoration: underline;
+}
+
+nav ul {
+  padding-inline-start: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+  margin-left: 1em;
+  font-size: 120%;
+}
+
+
+.logo {
+  font-size: 4rem;
+  margin-top: 4.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'DejaVu Sans', sans-serif;
+}
+
+.logo a:link, 
+.logo a:visited,
+.logo a:active {
+  text-decoration: none;
+  color: var(--logo-link-color);  
+}
+
+
+/* Code */
+
+code {
+  padding: .1rem .2rem;
+  margin: .5rem 0.2em;
+  border-radius: 4px;
+  white-space: nowrap;
+  color: #f8f8f2; 
+  background-color: #414141;
+  font-size: 1.15em;
+}
+
+pre > code {
+  display: block;
+  padding: 1.0rem;
+  white-space: pre;
+  color: #FFF;
+  background-color: transparent;
+  overflow-x: auto;
+}
+
+pre {
+  border-radius: 6px;
+}
+ 
+
+img.profile.small{
+  width: 165px;
+}
+
+img.profile.round {
+  border-radius: 50%;  
+}
+
+
+img {
+  max-width: 100%;
+}
+
+.avatar {
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: -16px;
+  margin-bottom: -50px;  
+  border-radius: 50px;
+  /* box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0);*/
+  /* border: 2px solid white;*/
+  /* background-image: url('');*/
+  /*background-size: cover;*/
+}
+
+/* Image Gallery */
+
+.picbox {
+  display: inline-block;
+  margin: 0.5em;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+}
+
+figcaption {
+  font-size: 1.0em;
+  line-height: 1.5;
+  color: #fff;
+  background: rgba(19,43,102, .50);
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 28px;
+  margin-left: 5px;
+  padding: 0.6em;
+  box-sizing: border-box;  
+}
+
+img.gallery {
+  padding: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  margin-right: 2%;
+}
+
+img.gallery.medium,
+img.gallery.large {
+  width: 100%;
+}
+
+
+/* Other Page Elements */
+
+blockquote {
+  position: relative;
+  padding-left: 1.5em;
+  border-left: 0.2em solid var(--ft-color);
+  margin: 1.5em 0em;
+  font-style: italic;
+}
+
+p.small {
+  font-size: 0.8em;
+}
+
+p.description {
+  color: var(--ft-desc);
+  font-weight: bold;
+}
+
+.date {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+abbr {
+  cursor: help;
+}
+
+.centered {
+  text-align: center;
+}
+
+.header {
+  height: calc(100vh - 120px);
+  width: 100%;
+  max-height: 50px;
+  background-size: cover;
+  background-color: var(--header-color);	
+  /* background-image: url('');*/
+}
+
+mark {
+  background-color: var(--mk-bckg);
+  color: var(--mk-color);
+  padding: 3px;
+}
+
+/* Icons */
+
+i.fa,
+i.ft,
+i.hd {
+  color: var(--ft-color);  
+}
+
+i.ft {
+  margin-right: 1.0rem;  
+}
+
+i a:link,
+i a:visited,
+i a:active {
+  text-decoration: none;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 769px) {
+
+img.gallery.medium {
+  width: 300px;
+}
+
+img.gallery.large {
+  width: 500px;
+}
+
+html {
+  font-size: 100%;
+}
+}
